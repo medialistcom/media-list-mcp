@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.medialist/media-list",
+  "title": "Media List",
+  "description": "Find journalists, editors, producers, podcast hosts and creators to pitch, by beat and location.",
+  "version": "1.0.4",
+  "websiteUrl": "https://medialist.com",
+  "icons": [
+    { "src": "https://medialist.com/assets/favicon/apple-touch-icon.png", "mimeType": "image/png", "sizes": ["180x180"] }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://medialist.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {api_key}",
+          "description": "Your Media List API key (paid plans, request at medialist.com/developers)",
+          "isRequired": true,
+          "isSecret": true,
+          "variables": {
+            "api_key": { "description": "Media List API key", "isRequired": true, "isSecret": true }
+          }
+        }
+      ]
+    }
+  ]
+}
