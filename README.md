@@ -8,9 +8,21 @@ This is the hosted MCP server for [Media List](https://medialist.com). There is 
 
 - **URL:** `https://medialist.com/mcp`
 - **Transport:** Streamable HTTP
-- **Auth:** your Media List API key, sent as `Authorization: Bearer <key>` or `X-Api-Key: <key>`
+- **Auth:** sign in with your Media List account (OAuth), or send an API key
 
-API keys are available on paid plans. Request one at [medialist.com/developers](https://medialist.com/developers).
+### Claude, ChatGPT and other apps (sign in)
+
+1. Add a connector with the URL `https://medialist.com/mcp`.
+2. A Media List sign-in page opens. Sign in with Google or your email and password.
+3. Click **Allow**. That's it.
+
+Connecting needs an active paid Media List plan. You can see and disconnect connected apps anytime at
+[medialist.com/oauth/connections](https://medialist.com/oauth/connections).
+
+### API key
+
+Send your key as `Authorization: Bearer <key>` or `X-Api-Key: <key>`. API keys are available on paid plans.
+Request one at [medialist.com/developers](https://medialist.com/developers).
 
 ### Example client config
 
@@ -46,6 +58,11 @@ All tools are read-only.
 
 - [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=com.medialist) as `com.medialist/media-list`
 - [Smithery](https://smithery.ai/servers/medialist/media-list)
+
+## Privacy and support
+
+- Privacy policy: [medialist.com/privacy](https://medialist.com/privacy)
+- Support: support@medialist.com
 
 ## Links
 
